@@ -13,6 +13,9 @@ class Order(
     @Column(nullable = false)
     var count: Int = 0,
 
+    @Column(name = "user_id", nullable = false)
+    val userId: Long,
+
     @Column(name = "created_at", nullable = false)
     val createdAt: LocalDateTime = LocalDateTime.now(),
 
