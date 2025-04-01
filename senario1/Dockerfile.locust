@@ -1,0 +1,9 @@
+FROM locustio/locust:2.15.1
+
+WORKDIR /mnt/locust
+COPY locust/locustfile.py .
+COPY locust/requirements.txt .
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8089 
